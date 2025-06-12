@@ -12,6 +12,14 @@ def sentiment_analysis(text:str)->str:
 
 demo = gr.Interface(fn = sentiment_analysis,
                     inputs=['text'],
-                    outputs = ['text'],)
+                    outputs = ['text'],
+                    title="Emotion Detection",
+                    description="Based on the bert-emotion to detect the emotion in your text",
+                    examples=[
+                        ['I hate you'],
+                        ['You are so kind'],
+                        ['我想我们可以在一起']
+                    ]
+                    )
 
 demo.launch()
